@@ -17,7 +17,7 @@
 
 from setuptools import setup, find_packages
 setup(
-    name = "overkill-extra-notify",
+    name = "overkill-notify",
     version = "0.1",
     install_requires=["overkill", "notify2"],
     packages = find_packages(),
