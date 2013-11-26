@@ -18,14 +18,18 @@
 import notify2
 
 class Notify:
+    notify = notify2
     summary = ""
     message = None
+    urgency = notify2.URGENCY_NORMAL
 
     def __init__(self):
         notify2.init('Stuff')
         self.notification = notify2.Notification(self.summary)
 
     def show(self):
+        if self.urgency:
+            self.notification.set_urgency(self.urgency)
         self.notification.update(self.summary, self.message)
         self.notification.show()
 
